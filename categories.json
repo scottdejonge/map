@@ -1,0 +1,218 @@
+ { "categories" : [
+		{ "category": "business" } : {
+			"color": "#FF0000",
+			"types": [
+				{ "type": "accounting" },
+				{ "type": "insurance_agency" },
+				{ "type": "lawyer" },
+				{ "type": "real_estate_agency" },
+				{ "type": "storage" },
+				{ "type": "travel_agency" }
+			]
+		}, "store" : {
+			"color": "#FF0000",
+			"types": [
+				{ "type": "store" },
+				{ "type": "liquor_store" },
+				{ "type": "book_store" },
+				{ "type": "electronics_store" },
+				{ "type": "hardware_store" },
+				{ "type": "movie_rental" },
+				{ "type": "clothing_store" },
+				{ "type": "convenience_store" },
+				{ "type": "furniture_store" },
+				{ "type": "grocery_or_supermarket" },
+				{ "type": "department_store" },
+				{ "type": "shopping_mall" },
+				{ "type": "shoe_store" },
+				{ "type": "jewelry_store" },
+				{ "type": "pet_store" },
+				{ "type": "car_dealer" },
+				{ "type": "florist" },
+				{ "type": "laundry" },
+				{ "type": "post_office" }
+			]
+		}, "postal" : {
+			"color": "#FF0000",
+			"types": [
+				{ "type": "post_box" },
+				{ "type": "postal_code" },
+				{ "type": "postal_code_prefix" },
+				{ "type": "postal_town" },
+				{ "type": "geocode" },
+				{ "type": "street_number" },
+				{ "type": "street_address" },
+				{ "type": "neighborhood" },
+				{ "type": "route" }
+			]
+		}, "transport" : {
+			"color": "#FF0000",
+			"types": [
+				{ "type": "train_station" },
+				{ "type": "taxi_stand" },
+				{ "type": "subway_station" },
+				{ "type": "parking" },
+				{ "type": "car_repair" },
+				{ "type": "car_wash" },
+				{ "type": "transit_station" },
+				{ "type": "bus_station" },
+				{ "type": "gas_station" },
+				{ "type": "hello" }
+			]
+		}, "travel" : {
+			"color": "#FF0000",
+			"types": [
+				{ "type": "airport" },
+				{ "type": "car_rental" }
+			]
+		}, "health" : {
+			"color": "#FF0000",
+			"types": [
+				{ "type": "doctor" },
+				{ "type": "dentist" },
+				{ "type": "health" },
+				{ "type": "hospital" },
+				{ "type": "pharmacy" },
+				{ "type": "physiotherapist" },
+				{ "type": "veterinary_care" }
+			]
+		}, "tourism" : {
+			"color": "#FF0000",
+			"types": [
+				{ "type": "point_of_interest" },
+				{ "type": "natural_feature" }
+			]
+		}, "government" : {
+			"color": "#FF0000",
+			"types": [
+				{ "type": "political" },
+				{ "type": "embassy" },
+				{ "type": "local_government_office" },
+				{ "type": "city_hall" },
+				{ "type": "courthouse" }
+			]
+		}, "entertainment" : {
+			"color": "#FF0000",
+			"types": [
+				{ "type": "amusement_park" },
+				{ "type": "aquarium" },
+				{ "type": "bar" },
+				{ "type": "casino" },
+				{ "type": "movie_theater" },
+				{ "type": "night_club" },
+				{ "type": "zoo" }
+			]
+		}, "food" : {
+			"color": "#FF0000",
+			"types": [
+				{ "type": "bakery" },
+				{ "type": "cafe" },
+				{ "type": "food" },
+				{ "type": "meal_delivery" },
+				{ "type": "meal_takeaway" },
+				{ "type": "restaurant" },
+				{ "type": "hello" }
+			]
+		}, "parks" : {
+			"color": "#FF0000",
+			"types": [
+				{ "type": "park" },
+				{ "type": "campground" },
+				{ "type": "rv_park" }
+			]
+		}, "culture" : {
+			"color": "#FF0000",
+			"types": [
+				{ "type": "art_gallery" },
+				{ "type": "library" },
+				{ "type": "museum" }
+			]
+		}, "beauty" : {
+			"color": "#FF0000",
+			"types": [
+				{ "type": "beauty_salon" },
+				{ "type": "hair_care" },
+				{ "type": "gym" },
+				{ "type": "spa" }
+			]
+		}, "education" : {
+			"color": "#FF0000",
+			"types": [
+				{ "type": "school" },
+				{ "type": "university" }
+			]
+		}, "money" : {
+			"color": "#FF0000",
+			"types": [
+				{ "type": "atm" },
+				{ "type": "bank" },
+				{ "type": "finance" }
+			]
+		}, "accommodation" : {
+			"color": "#FF0000",
+			"types": [
+				{ "type": "lodging" }
+			]
+		}, "sports" : {
+			"color": "#FF0000",
+			"types": [
+				{ "type": "bowling_alley" },
+				{ "type": "stadium" }
+			]
+		}, "faith" : {
+			"color": "#FF0000",
+			"types": [
+				{ "type": "church" },
+				{ "type": "hindu_temple" },
+				{ "type": "mosque" },
+				{ "type": "place_of_worship" },
+				{ "type": "synagogue" }
+			]
+		}, "emergency" : {
+			"color": "#FF0000",
+			"types": [
+				{ "type": "fire_station" },
+				{ "type": "police" }
+			]
+		}, "services" : {
+			"color": "#FF0000",
+			"types": [
+				{ "type": "electrician" },
+				{ "type": "general_contractor" },
+				{ "type": "locksmith" },
+				{ "type": "moving_company" },
+				{ "type": "painter" },
+				{ "type": "plumber" },
+				{ "type": "roofing_contractor" }
+			]
+		}, "passing" : {
+			"color": "#FF0000",
+			"types": [
+				{ "type": "cemetery" },
+				{ "type": "funeral_home" }
+			]
+		}, "general" : {
+			"color": "#FF0000",
+			"types": [
+				{ "type": "administrative_area_level_1" },
+				{ "type": "administrative_area_level_2" },
+				{ "type": "administrative_area_level_3" },
+				{ "type": "colloquial_area" },
+				{ "type": "country" },
+				{ "type": "establishment" },
+				{ "type": "floor" },
+				{ "type": "intersection" },
+				{ "type": "locality" },
+				{ "type": "premise" },
+				{ "type": "room" },
+				{ "type": "sublocality" },
+				{ "type": "sublocality_level_1" },
+				{ "type": "sublocality_level_2" },
+				{ "type": "sublocality_level_3" },
+				{ "type": "sublocality_level_4" },
+				{ "type": "sublocality_level_5" },
+				{ "type": "subpremise" }
+			]
+		}
+	]
+}

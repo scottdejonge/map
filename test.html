@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Place searches</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <script>
+    	var typeArray = [
+			{ 'type': 'accounting', 'color': '#333399' },
+			{ 'type': 'airport', 'color': '#333399' },
+			{ 'type': 'amusement_park', 'color': '#333399' },
+			{ 'type': 'aquarium', 'color': '#333399' },
+			{ 'type': 'art_gallery', 'color': '#333399' },
+			{ 'type': 'atm', 'color': '#333399' },
+			{ 'type': 'bakery', 'color': '#333399' },
+			{ 'type': 'bank', 'color': '#333399' },
+			{ 'type': 'bar', 'color': '#333399' },
+			{ 'type': 'beauty_salon', 'color': '#333399' },
+			{ 'type': 'bicycle_store', 'color': '#333399' },
+			{ 'type': 'book_store', 'color': '#333399' },
+			{ 'type': 'bowling_alley', 'color': '#333399' },
+			{ 'type': 'bus_station', 'color': '#333399' },
+			{ 'type': 'cafe', 'color': '#333399' },
+			{ 'type': 'campground', 'color': '#333399' },
+			{ 'type': 'car_dealer', 'color': '#333399' },
+			{ 'type': 'car_rental', 'color': '#333399' },
+			{ 'type': 'car_repair', 'color': '#333399' },
+			{ 'type': 'car_wash', 'color': '#333399' },
+			{ 'type': 'casino', 'color': '#333399' },
+			{ 'type': 'cemetery', 'color': '#333399' },
+			{ 'type': 'church', 'color': '#333399' },
+			{ 'type': 'city_hall', 'color': '#333399' },
+			{ 'type': 'clothing_store', 'color': '#333399' },
+			{ 'type': 'convenience_store', 'color': '#333399' },
+			{ 'type': 'courthouse', 'color': '#333399' },
+			{ 'type': 'dentist', 'color': '#333399' },
+			{ 'type': 'department_store', 'color': '#333399' },
+			{ 'type': 'doctor', 'color': '#333399' },
+			{ 'type': 'electrician', 'color': '#333399' },
+			{ 'type': 'electronics_store', 'color': '#333399' },
+			{ 'type': 'embassy', 'color': '#333399' },
+			{ 'type': 'establishment', 'color': '#333399' },
+			{ 'type': 'finance', 'color': '#333399' },
+			{ 'type': 'fire_station', 'color': '#333399' },
+			{ 'type': 'florist', 'color': '#333399' },
+			{ 'type': 'food', 'color': '#333399' },
+			{ 'type': 'funeral_home', 'color': '#333399' },
+			{ 'type': 'furniture_store', 'color': '#333399' },
+			{ 'type': 'gas_station', 'color': '#333399' },
+			{ 'type': 'general_contractor', 'color': '#333399' },
+			{ 'type': 'grocery_or_supermarket', 'color': '#333399' },
+			{ 'type': 'gym', 'color': '#333399' },
+			{ 'type': 'hair_care', 'color': '#333399' },
+			{ 'type': 'hardware_store', 'color': '#333399' },
+			{ 'type': 'health', 'color': '#333399' },
+			{ 'type': 'hindu_temple', 'color': '#333399' },
+			{ 'type': 'home_goods_store', 'color': '#333399' },
+			{ 'type': 'hospital', 'color': '#333399' },
+			{ 'type': 'insurance_agency', 'color': '#333399' },
+			{ 'type': 'jewelry_store', 'color': '#333399' },
+			{ 'type': 'laundry', 'color': '#333399' },
+			{ 'type': 'lawyer', 'color': '#333399' },
+			{ 'type': 'library', 'color': '#333399' },
+			{ 'type': 'liquor_store', 'color': '#333399' },
+			{ 'type': 'local_government_office', 'color': '#333399' },
+			{ 'type': 'locksmith', 'color': '#333399' },
+			{ 'type': 'lodging', 'color': '#E84C2D' },
+			{ 'type': 'meal_delivery', 'color': '#333399' },
+			{ 'type': 'meal_takeaway', 'color': '#333399' },
+			{ 'type': 'mosque', 'color': '#333399' },
+			{ 'type': 'movie_rental', 'color': '#333399' },
+			{ 'type': 'movie_theater', 'color': '#333399' },
+			{ 'type': 'moving_company', 'color': '#333399' },
+			{ 'type': 'museum', 'color': '#333399' },
+			{ 'type': 'night_club', 'color': '#333399' },
+			{ 'type': 'painter', 'color': '#333399' },
+			{ 'type': 'park', 'color': '#333399' },
+			{ 'type': 'parking', 'color': '#333399' },
+			{ 'type': 'pet_store', 'color': '#333399' },
+			{ 'type': 'pharmacy', 'color': '#333399' },
+			{ 'type': 'physiotherapist', 'color': '#333399' },
+			{ 'type': 'place_of_worship', 'color': '#333399' },
+			{ 'type': 'plumber', 'color': '#333399' },
+			{ 'type': 'police', 'color': '#333399' },
+			{ 'type': 'post_office', 'color': '#333399' },
+			{ 'type': 'real_estate_agency', 'color': '#333399' },
+			{ 'type': 'restaurant', 'color': '#333399' },
+			{ 'type': 'roofing_contractor', 'color': '#333399' },
+			{ 'type': 'rv_park', 'color': '#333399' },
+			{ 'type': 'school', 'color': '#333399' },
+			{ 'type': 'shoe_store', 'color': '#333399' },
+			{ 'type': 'shopping_mall', 'color': '#333399' },
+			{ 'type': 'spa', 'color': '#333399' },
+			{ 'type': 'stadium', 'color': '#333399' },
+			{ 'type': 'storage', 'color': '#333399' },
+			{ 'type': 'store', 'color': '#333399' },
+			{ 'type': 'subway_station', 'color': '#333399' },
+			{ 'type': 'synagogue', 'color': '#333399' },
+			{ 'type': 'taxi_stand', 'color': '#333399' },
+			{ 'type': 'train_station', 'color': '#333399' },
+			{ 'type': 'travel_agency', 'color': '#333399' },
+			{ 'type': 'university', 'color': '#333399' },
+			{ 'type': 'veterinary_care', 'color': '#333399' },
+			{ 'type': 'zoo', 'color': '#333399' },
+			{ 'type': 'locality', 'color': '#C9574D' }
+		];
+
+    	var map;
+    	var mapBounds;
+		var markers = [];
+		
+		function initialize() {
+			
+			var me = new google.maps.LatLng(-27.5001674, 153.0151598);
+			
+			// Get User Location
+			if(navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(createMap, function() {
+					handleNoGeolocation(true);
+				});
+			} else {
+				browserSupportFlag = false;
+				handleNoGeolocation(browserSupportFlag);
+			}
+			
+			// Create Map at User Position
+			function createMap(position) {	
+				userLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+				
+				// Google Map Options		
+				var mapOptions = {
+					zoom: 16,
+					scrollWheel: false,
+					center: userLocation,
+					mapTypeId: google.maps.MapTypeId.ROADMAP,
+					mapTypeControl: false,
+					panControl: false,
+					zoomControl: false,
+					scaleControl: false,
+					streetViewControl: false,
+					styles: [
+						{stylers: [{ visibility: 'simplified' }]},
+						{elementType: 'labels', stylers: [{ visibility: 'off' }]}
+					]
+				}
+				
+				// Create the Map
+				map = new google.maps.Map(document.getElementById('map'), mapOptions);
+				service = new google.maps.places.PlacesService(map);
+			
+				// Create InfoWindow
+				var infowindow = new google.maps.InfoWindow();
+				
+				// Define Map Bounds
+				var viewportBox;
+				google.maps.event.addListener(map, 'idle', function(event) {
+					clearMarkers();
+					var bounds = map.getBounds();
+					var NE = bounds.getNorthEast();
+					var SW = bounds.getSouthWest();
+					
+					var viewportPoints = [ NE, new google.maps.LatLng(NE.lat(), SW.lng()), SW, new google.maps.LatLng(SW.lat(), NE.lng()), NE ];
+					
+					if (viewportBox) {
+						viewportBox.setPath(viewportPoints);
+					} else {
+						viewportBox = new google.maps.Polyline({
+							path: viewportPoints,
+							strokeColor: '#333399',
+							strokeOpacity: 1.0,
+							strokeWeight: 4 
+						});
+						viewportBox.setMap(map);
+					};
+					
+					var info = document.getElementById('info');
+					//console.log('NorthEast: ' + NE.lat() + '   ' + NE.lng() + 'SouthWest: ' + SW.lat() + '   ' + SW.lng());
+					
+					getPlacesFromBounds();
+					
+				});
+			
+				// Bounds Change Event
+				google.maps.event.addListener(map, 'bounds_changed', function() {
+					var bounds = map.getBounds();
+					//console.log('Getting Map Bounds' + bounds);
+				});
+				
+				// Search Places
+				var searchInput = (document.getElementById('search-input'));
+				var searchBox = new google.maps.places.SearchBox(searchInput);
+				
+				google.maps.event.addListener(searchBox, 'places_changed', function() {
+					var places = searchBox.getPlaces();
+					clearMarkers();
+					POOOP(places);
+				});
+				
+				// Places API Request
+				function getPlacesFromBounds() {
+					var bounds = map.getBounds();
+					var request = {
+						bounds: bounds,
+						radius: '500'
+					};
+					service.nearbySearch(request, createMarkers);
+				}
+				
+				// Clear Markers
+				function clearMarkers() {
+					for (var i = 0; i < markers.length; i++ ) {
+						markers[i].setMap(null);
+					}
+					markers = [];
+				}
+				
+				// Create Markers
+				function createMarkers(results, status) {
+					if (status == google.maps.places.PlacesServiceStatus.OK) {
+						for (var i = 0; i < results.length; i++) {
+							var place = results[i];
+							drawMarker(results[i]);
+						}
+					}
+				}
+				
+				// Create Markers From Search
+				function POOOP(places) {
+					var bounds = new google.maps.LatLngBounds();
+					
+					for (var i = 0, place; place = places[i]; i++) {
+						var marker = new google.maps.Marker({
+							map: map,
+							title: place.name,
+							position: place.geometry.location,
+							icon: {
+								path: 'M 100 0 L 0 0 L 0 100 L 35 100 L 50 120 L 65 100 L 100 100 Z',
+								fillColor: '#333399',
+								fillOpacity: 1,
+								strokeColor: '',
+								strokeWeight: 0,
+								scale: 1/2
+							}
+						});
+						
+						// Push Marker to Markers Array
+						markers.push(marker);
+						bounds.extend(place.geometry.location);
+					}
+					console.log(markers);
+					map.fitBounds(bounds);
+				}
+				
+				// Find Color
+				function findTypeColor(type) {
+					for (var i = 0; i < typeArray.length; i++) {
+						if(typeArray[i].type == type) {
+							return typeArray[i].color;
+							console.log(typeArray[i].color);
+						}
+					}
+				}
+				
+				// Draw Markers
+				function drawMarker(place) {
+					var bounds = map.getBounds();
+					
+					var color = findTypeColor(place.types[0]);
+					
+					var marker = new google.maps.Marker({
+						map: map,
+						title: place.name,
+						position: place.geometry.location,
+						icon: {
+							path: 'M 100 0 L 0 0 L 0 100 L 35 100 L 50 120 L 65 100 L 100 100 Z',
+							fillColor: color,
+							fillOpacity: 1,
+							strokeColor: '',
+							strokeWeight: 0,
+							scale: 1/2
+						}
+					});
+				
+					google.maps.event.addListener(marker, 'click', function() {
+						infowindow.setContent(place.name + '<br/>' + place.types[0] +'<br/><img src="' + place.icon + '" />');
+						infowindow.open(map, this);
+					});
+					
+					markers.push(marker);
+					bounds.extend(place.geometry.location);
+				}
+			}
+		}
+				
+		
+		
+		// Create Markers
+		/*
+function createMarkers(places) {
+			var bounds = new google.maps.LatLngBounds();
+			
+			for (var i = 0, place; place = places[i]; i++) {
+				var marker = new google.maps.Marker({
+					map: map,
+					title: place.name,
+					position: place.geometry.location,
+					animation: google.maps.Animation.DROP,
+					icon: {
+						path: 'M 100 0 L 0 0 L 0 100 L 35 100 L 50 120 L 65 100 L 100 100 Z',
+						fillColor: '#333399',
+						fillOpacity: 1,
+						strokeColor: '',
+						strokeWeight: 0,
+						scale: 1/2
+					}
+				});
+				
+				// Push Marker to Markers Array
+				markers.push(marker);
+				bounds.extend(place.geometry.location);
+			}
+			console.log(markers);
+			map.fitBounds(bounds);
+		}
+*/
+		
+		
+		function loadScript() {
+			var script = document.createElement('script');
+			script.type = 'text/javascript';
+			script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&sensor=true&' + 'callback=initialize';
+			document.body.appendChild(script);
+		}
+		
+		window.onload = loadScript;
+    </script>
+  </head>
+  <body>
+    <div id="map" style="width: 50%; height: 500px; float:left"></div>
+    <div id="search">
+		<input id="search-input" type="search" results="5" name="search" placeholder="Search..." />
+	</div>
+  </body>
+</html>
