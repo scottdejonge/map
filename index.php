@@ -7,8 +7,6 @@
 	<link rel="shortcut icon" href="ico/favicon.ico" />
 	<link rel="stylesheet" type="text/css" href="css/map-icons.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
-	<!-- <script language="JavaScript" type="text/javascript" src="js/modernizr.custom.js"></script> -->
-    <!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&libraries=places"></script> -->
 </head>
 <body>
 	<div id="loading"></div>
